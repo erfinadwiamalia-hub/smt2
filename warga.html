@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Identitas</title>
+    <link rel="stylesheet" href="warga2.css">
+</head>
+<body>
+     <header>
+      <h1>Bandung</h1>
+      <h5>
+        Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi
+        tersebut.
+      </h5>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#sejarah">Sejarah</a>
+          </li>
+          <li>
+            <a href="#geografis">Geografis</a>
+          </li>
+          <li>
+            <a href="#wisata">Wisata</a>
+          </li>
+          <li>
+            <a href="#perpindahan-warga">Perpindahan Warga</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <form>
+        <fieldset>
+            <legend>Form Inputan Warga</legend>
+
+            <div>
+                <label for="nama-depan">Nama Depan :</label> <br />
+                <input id="nama-depan" name="nama_depan" placeholder="Nama Depan" />
+            </div>
+
+            <div>
+                <label for="nama-belakang">Nama Belakang :</label> <br />
+                <input 
+                id="nama-belakang"
+                name="nama_belakang"
+                placeholder="Nama Belakang"
+                />
+            </div>
+
+            <div>
+                <label for="alamat">Alamat saat ini:</label> <br />
+
+                <textarea id="alamat" name="alamat" rows="5"  cols="33"></textarea>
+                <br />
+            </div>
+
+            <div>
+                <label>Tempat Lahir :</label> <br />
+                <input type="text" name="tempat-lahir" placeholder="Tempat Lahir"/> <br />
+            </div>
+
+            <div>
+                <label>Tanggal Lahir :</label> <br />
+                <input type="date" name="tanggal-lahir" /> <br />
+            </div>
+
+            <label for="nama-belakang">Jenis Kelamin :</label> <br />
+
+            <div>
+                <input id="lk" type="radio" name="jenis_kelamin" />
+                <label for="lk">Laki-laki</label>
+            </div>
+            <div>
+                <input id="pr" type="radio" name="jenis_kelamin" />
+                <label for="pr">Perempuan</label>
+            </div>
+
+            <label for="nama-belakang">Bahasa Asing yang dikuasai :</label> <br />
+
+            <div>
+                <input id="inggris" type="checkbox" name="bahasa_asing" />
+                <label for="inggris">Bahasa Inggris</label>
+            </div>
+
+            <div>
+                <input id="arab" type="checkbox" name="bahsa_asing" />
+                <label for="arab">Bahasa Arab</label>
+            </div>
+
+            <div>
+                <input id="Jerman" type="checkbox" name="bahsa_asing" />
+                <label for="Jerman">Bahasa Jerman</label>
+            </div>
+
+            <div>
+                 <label for="nik">NIK :</label> <br />
+                <input type="text" name="nik" placeholder="NIK"/> <br />
+            </div>
+
+            <div>
+               <label for="agama">Agama :</label> <br />
+               <select id="Agama" name="agama">
+                <option value="pilih-agama">Pilih Agama</option>
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen</option>
+                <option value="hindu">Hindu</option>
+                <option value="budha">Budha</option>
+                <option value="katolik">Katolik</option>
+                <option value="konghucu">Konghucu</option>
+               </select>
+            </div>
+
+            
+
+            <div>
+                <label>No Telepon:</label> <br />
+                <input type="tel" name="Telepon" /> <br />
+            </div>
+            
+             <label for="nama-belakang">Status :</label> <br />
+
+            <div>
+                <input id="status" type="radio" name="Status" />
+                <label for="status">Sudah menikah</label>
+            </div>
+
+            <div>
+                <input id="status" type="radio" name="Status" />
+                <label for="status">Belum menikah</label>
+            </div>
+          
+
+            <p>
+                <input type="submit" name="submit" value="Submit" />
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
