@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator aritmatika</title>
+</head>
+<body>
+    <h2>Belajar aritmatika</h2>
+    <button onclick="tampilkanData()">Tampilkan Data</button>
+    <p id="output"></p>
+    <script>
+        function tampilkanData() 
+    {
+        let angka1 = 20;
+        let angka2 = 4;
+
+     
+        let tambah = angka1 + angka2;
+        let kurang = angka1 - angka2;
+        let kali = angka1 * angka2;
+        let bagi = angka1 / angka2;
+        let sisaBagi = angka1 % angka2;
+
+       
+        let hasil = "Hasil Penjumlahan: " + tambah + "<br>" +
+                    "Hasil Pengurangan: " + kurang + "<br>" +
+                    "Hasil Perkalian: " + kali + "<br>" +
+                    "Hasil Pembagian: " + bagi + "<br>"
+                    "Sisa Hasil Bagi: " + sisaBagi;
+
+        
+        document.getElementById("output").innerHTML = hasil;
+    }
+
+    </script>
+</body>
+</html>
