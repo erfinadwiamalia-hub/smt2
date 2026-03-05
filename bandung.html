@@ -1,43 +1,44 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Halaman Profil Bandung</title>
+<!DOCTYPE html> <!--Menentukan tipe dokumen HTML5-->
+<html> <!--Tag pembuka untuk dokumen HTML-->
+  <head> <!--Bagian kepala dokumen HTML-->
+    <meta charset="utf-8" /> <!--Menentukan karakter encoding untuk dokumen HTML-->
+    <title>Halaman Profil Bandung</title> <!--Judul halaman yang muncul di tab browser-->
 
-    <link rel="stylesheet" href="bandung2.css" />
+    <link rel="stylesheet" href="bandung2.css" /> <!--Menghubungkan file CSS eksternal untuk styling halaman-->
+    
   </head>
 
-  <body>
-    <header>
-      <h1>Bandung</h1>
+  <body> <!--Bagian tubuh dokumen HTML (Awal isi halaman)-->
+    <header> <!--Bagian header halaman yang biasanya berisi judul dan navigasi-->
+      <h1>Bandung</h1> <!--Judul utama halaman-->
       <h5>
         Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi
         tersebut.
-      </h5>
+      </h5> <!--Deskripsi singkat tentang Bandung-->
 
-      <nav>
-        <ul>
-          <li>
-            <a href="#sejarah">Sejarah</a>
+      <nav> <!--Bagian navigasi yang berisi tautan ke bagian-bagian lain dalam halaman-->
+        <ul> <!--Daftar tidak berurutan untuk tautan navigasi-->
+          <li> <!--Item pertama dalam daftar navigasi-->
+            <a href="#sejarah">Sejarah</a> <!--Tautan yang mengarah ke bagian dengan id "sejarah"-->
           </li>
           <li>
-            <a href="#geografis">Geografis</a>
+            <a href="#geografis">Geografis</a> <!--Tautan yang mengarah ke bagian dengan id "geografis"-->
           </li>
           <li>
-            <a href="#wisata">Wisata</a>
+            <a href="#wisata">Wisata</a> <!--Tautan yang mengarah ke bagian dengan id "wisata"-->
           </li>
           <li>
-            <a href="#perpindahan-warga">Perpindahan Warga</a>
+          <a href="form.html">Perpindahan Warga</a> <!--Tautan ke halaman form inputan warga baru-->
           </li>
-        </ul>
-      </nav>
-    </header>
+        </ul>  
+      </nav> <!--Akhir bagian navigasi-->
+    </header> <!--Akhir bagian header-->
 
-    <main>
-      <div id="content">
-        <article id="sejarah">
-          <h2>Sejarah</h2>
-          <img src="c:\Users\Alfina Nur Falah\OneDrive\Gambar\history.jpg" class="center-img" alt="sejarah" />
+    <main> <!--Bagian utama isi halaman-->
+      <div id="content"> <!--Container untuk konten utama halaman-->
+        <article id="sejarah"> <!--Bagian artikel dengan id "sejarah"-->
+          <h2>Sejarah</h2> <!--Judul untuk bagian sejarah-->
+          <img src="c:\Users\Alfina Nur Falah\OneDrive\Gambar\history.jpg" class="center-img" alt="sejarah" /> 
           <p>
             Kata Bandung berasal dari kata bendung atau bendungan karena terbendungnya sungai
             Citarum oleh lava Gunung Tangkuban Parahu yang lalu membentuk telaga. Legenda yang
@@ -58,7 +59,7 @@
           </p>
         </article>
 
-        <article id="geografis">
+        <article id="geografis"> <!--Bagian artikel dengan id "geografis"-->
           <h2>Geografis</h2>
           <img src="c:\Users\Alfina Nur Falah\OneDrive\Gambar\geografis.jpg" alt="geografis" />
           <p>
@@ -78,7 +79,7 @@
           </p>
         </article>
 
-        <article id="wisata">
+        <article id="wisata"> <!--Bagian artikel dengan id "wisata"-->
           <h2>Wisata</h2>
           <p>
             Sejak dibukanya Jalan Tol Cipularang, kota Bandung telah menjadi tujuan utama dalam
@@ -87,7 +88,7 @@
             sejumlah besar bangunan lama berarsitektur peninggalan Belanda.
           </p>
 
-          <section>
+          <section> <!--Bagian subartikel untuk wisata dengan id "farm-house"-->
             <h3>Farm House Lembang</h3>
             <img src="c:\Users\Alfina Nur Falah\OneDrive\Gambar\farm-house.jpg" alt="farm house" />
             <p>
@@ -98,7 +99,7 @@
             </p>
           </section>
 
-          <section>
+          <section> <!--Bagian subartikel untuk wisata dengan id "bosscha"-->
             <h3>Observatorium Bosscha</h3>
             <img src="c:\Users\Alfina Nur Falah\OneDrive\Gambar\bosscha.jpg" alt="bosscha" />
             <p>
@@ -112,49 +113,27 @@
               setiap hari Sabtu.
             </p>
           </section>
-        </article>
-        
-        <article id="perpindahan-warga">
-            <h2>Perpindahan Warga</h2>
-            <h3>Data Perpindahan Warga</h3>
-            <table border="1">
-               <tr>
-                  <th>Nama</th>
-                  <th>NIK</th>
-                  <th>Alamat Asal</th>
-                  <th>Alamat Tujuan</th>
-                  <th>Tanggal Pindah</th>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-               </tr>
-            </table>
 
-        </article>
-      </div>
-
-      <aside>
-        <article>
-          <header>
-            <h2>Kota Bandung</h2>
-            <p>Kota Kembang Paris van Java</p>
-            <figure>
+          <section> <!--Bagian subartikel untuk wisata dengan id "bandung"-->
+            
+      <aside> <!--Bagian aside untuk informasi tambahan atau sidebar-->
+        <article> <!--Bagian artikel untuk informasi tambahan tentang kota Bandung-->
+          <header> <!--Bagian header untuk informasi tambahan tentang kota Bandung-->
+            <h2>Kota Bandung</h2> <!--Judul untuk informasi tambahan tentang kota Bandung-->
+            <p>Kota Kembang Paris van Java</p> <!--Deskripsi singkat tentang kota Bandung-->
+            <figure> <!--Tag untuk mengelompokkan gambar dan caption-->
               <img src="c:\Users\Alfina Nur Falah\OneDrive\Gambar\bandung-badge.png" />
               <figcaption>Lambang</figcaption>
             </figure>
           </header>
 
-          <section>
+          <section> <!--Bagian section untuk informasi lainnya tentang kota Bandung-->
             <h3>Informasi Lainnya</h3>
 
-            <table>
-              <tr>
-                <th>Negara</th>
-                <td>Indonesia</td>
+            <table> <!--Tag untuk membuat tabel informasi lainnya tentang kota Bandung-->
+              <tr> <!--Baris pertama dalam tabel-->
+                <th>Negara</th> <!--Header untuk kolom negara-->
+                <td>Indonesia</td> <!--Data untuk kolom negara dengan nilai "Indonesia"-->
               </tr>
               <tr>
                 <th>Hari jadi</th>
@@ -178,8 +157,10 @@
       </aside>
     </main>
 
-    <footer>
+    <footer> <!--Bagian footer untuk informasi hak cipta atau informasi tambahan lainnya-->
       <p>Belajar Dasar Pemrograman Web &#169; 2019, Dicoding Academy</p>
     </footer>
+    
+
   </body>
 </html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="form2.css"/> <!-- Menghubungkan file CSS eksternal untuk styling halaman -->
+    <title>Form Inputan Warga Baru</title> <!-- Judul halaman yang akan ditampilkan pada tab browser -->
+</head>
+<body>
+    <header>
+        <h1>Bandung</h1>
+        <p>
+            Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.
+        </p>
+        <nav>
+            <ul>
+                <li><a href="bandung.html#sejarah">Sejarah</a></li>
+                <li><a href="bandung.html#geografis">Geografis</a></li>
+                <li><a href="bandung.html#wisata">Wisata</a></li>
+                <li><a href="form.html#perpindahan-warga">Perpindahan Warga</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form method="post" action=""> <!--digunakan untuk mengirim data input pengguna ke server secara tersembunyi (tidak terlihat di URL) menggunakan metode POST -->
+        <fieldset> <!--Tag fieldset digunakan untuk mengelompokkan elemen-elemen form yang terkait, memberikan batasan visual dan semantik pada bagian form tertentu-->
+            <legend>Form Inputan Warga Baru</legend> <!--Tag legend digunakan untuk memberikan judul atau keterangan pada fieldset, menjelaskan tujuan atau konteks dari kelompok elemen form yang ada di dalamnya-->
+
+            <div> <!--Tag div digunakan untuk mengelompokkan elemen-elemen form yang terkait, memberikan struktur dan tata letak pada form-->
+                <label for="nama-depan">Nama Depan :</label> <br /> <!--Tag label digunakan untuk memberikan label atau keterangan pada elemen form, atribut for digunakan untuk mengaitkan label dengan elemen input yang memiliki id yang sama, sehingga ketika label diklik, fokus akan diarahkan ke elemen input terkait. Tag br digunakan untuk membuat baris baru setelah label-->
+                <input id="nama-depan" name="nama_depan" placeholder="Nama Depan" required /> <!--Tag input digunakan untuk membuat elemen input pada form, atribut id digunakan untuk mengidentifikasi elemen input, name digunakan untuk memberikan nama pada elemen input yang akan digunakan saat mengirim data ke server, placeholder memberikan teks petunjuk di dalam input, dan required menandakan bahwa input ini wajib diisi sebelum form dapat disubmit-->
+            </div>
+
+            <div>
+                <label for="nama-belakang">Nama Belakang :</label> <br />
+                <input id="nama-belakang" name="nama_belakang" placeholder="Nama Belakang" required />
+            </div>
+
+            <div>
+                <label for="nik">NIK :</label> <br /> <!--Label untuk input NIK dengan atribut for yang mengarah ke id input-->
+                <input id="nik" name="nik" placeholder="Nomor Induk Kependudukan" required />
+            </div>
+
+            <div>
+                <label for="telepon">No. Telepon :</label> <br /> <!--Label untuk input telepon dengan atribut for yang mengarah ke id input-->
+                <input id="telepon" name="Telepon" type="tel" placeholder="08xxxxxxxxxx" required />
+            </div>
+
+            <div>
+                <label for="email">Email :</label> <br /> <!--Label untuk input email dengan atribut for yang mengarah ke id input-->
+                <input id="email" name="Email" type="email" placeholder="contoh@email.com" required />
+            </div>
+
+            <div>
+                <label for="agama">Agama :</label> <br /> <!--Label untuk select agama dengan atribut for yang mengarah ke id select-->
+                <select id="agama" name="agama" required> <!--Select untuk memilih agama dengan id dan name, required menandakan bahwa pilihan ini wajib diisi sebelum form dapat disubmit-->
+                    <option value="">Pilih Agama</option> <!--Option pertama sebagai placeholder dengan value kosong yang menunjukkan pilihan untuk memilih agama-->
+                    <option value="islam">Islam</option> <!--Option untuk agama Islam dengan value "islam"-->
+                    <option value="kristen">Kristen</option>
+                    <option value="katolik">Katolik</option>
+                    <option value="hindu">Hindu</option>
+                    <option value="budha">Budha</option>
+                    <option value="konghucu">Konghucu</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="status">Status Pernikahan :</label> <br /> <!--Label untuk select status pernikahan dengan atribut for yang mengarah ke id select-->
+                <select id="status" name="status" required> <!--Select untuk memilih status pernikahan dengan id dan name, required menandakan bahwa pilihan ini wajib diisi sebelum form dapat disubmit-->
+                    <option value="">Pilih Status</option> <!--Option pertama sebagai placeholder dengan value kosong yang menunjukkan pilihan untuk memilih status pernikahan-->
+                    <option value="menikah">Menikah</option> <!--Option untuk status menikah dengan value "menikah"-->
+                    <option value="belum-menikah">Belum Menikah</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="story">Alamat saat ini:</label> <br /> <!--Label untuk textarea alamat dengan atribut for yang mengarah ke id textarea-->
+                <textarea id="story" name="story" rows="5" cols="33" required></textarea> <!--Textarea untuk input alamat dengan id dan name, rows menentukan jumlah baris, cols menentukan jumlah kolom, dan required menandakan bahwa input ini wajib diisi sebelum form dapat disubmit-->
+            </div>
+
+            <div>
+                <label for="tempat-lahir">Tempat Lahir :</label> <br /> <!--Label untuk input tempat lahir dengan atribut for yang mengarah ke id input-->
+                <input type="text" name="tempat-lahir" id="tempat-lahir" required /> <br /> <!--Input teks untuk tempat lahir dengan name dan id, required menandakan bahwa input ini wajib diisi sebelum form dapat disubmit, diikuti dengan tag br untuk membuat baris baru-->
+            </div>
+
+            <div>
+                <label for="tgl-lahir">Tanggal Lahir :</label> <br /> <!--Label untuk input tanggal lahir dengan atribut for yang mengarah ke id input-->
+                <input type="date" name="tgl_lahir" id="tgl-lahir" required /> <br /> <!--Input tanggal untuk tanggal lahir dengan name dan id, required menandakan bahwa input ini wajib diisi sebelum form dapat disubmit, diikuti dengan tag br untuk membuat baris baru-->
+            </div>
+
+            <label>Jenis Kelamin :</label> <br /> <!--Label untuk input jenis kelamin tanpa atribut for karena tidak ada id pada input, diikuti dengan tag br untuk membuat baris baru-->
+            <div>
+                <input id="lk" type="radio" name="jenis_kelamin" value="laki-laki" required /> <!--Input radio untuk jenis kelamin laki-laki dengan id dan name yang sama untuk mengelompokkan pilihan, required menandakan bahwa salah satu pilihan jenis kelamin wajib dipilih sebelum form dapat disubmit-->
+                <label for="lk">Laki-Laki</label> <!--Label untuk input radio laki-laki dengan atribut for yang mengarah ke id input-->
+            </div>
+            <div>
+                <input id="pr" type="radio" name="jenis_kelamin" value="perempuan" />
+                <label for="pr">Perempuan</label>
+            </div>
+
+            <label for="bahasa-asing">Bahasa Asing yang dikuasai :</label> <br /> <!--Label untuk input bahasa asing dengan atribut for yang mengarah ke id input, diikuti dengan tag br untuk membuat baris baru-->
+            <div>
+                <input id="inggris" type="checkbox" name="bahasa_asing" value="inggris" /> <!--Input checkbox untuk bahasa Inggris dengan id dan name yang sama untuk mengelompokkan pilihan-->
+                <label for="inggris">Inggris</label> <!--Label untuk input checkbox bahasa Inggris dengan atribut for yang mengarah ke id input-->  
+            </div>
+            <div>
+                <input id="arab" type="checkbox" name="bahasa_asing" value="arab" />
+                <label for="arab">Arab</label>
+            </div>
+            <div>
+                <input id="jerman" type="checkbox" name="bahasa_asing" value="jerman" />
+                <label for="jerman">Jerman</label>
+            </div>
+
+            <p>
+                <input type="submit" name="submit" value="Submit" /> <!--Input submit untuk mengirim data form ke server dengan name "submit" dan value "Submit" yang akan ditampilkan pada tombol-->
+                <input type="reset" value="Reset" /> <!--Input reset untuk menghapus semua data yang telah diisi dalam form dan mengembalikan form ke kondisi awal dengan value "Reset" yang akan ditampilkan pada tombol-->
+            </p>
+        </fieldset>
+    </form>
+
+    <div id="hasil"></div> <!--Div untuk menampilkan hasil output dari form inputan warga baru, dengan id "hasil" yang akan digunakan untuk menampilkan data yang telah diinput setelah form disubmit-->
+
+    <script> //Script JavaScript untuk menangani event submit pada form, mencegah pengiriman data ke server, mengambil data dari form, dan menampilkan hasilnya dalam format tabel di dalam div dengan id "hasil"
+        const form = document.querySelector("form"); //Mengambil elemen form dari dokumen menggunakan querySelector dan menyimpannya dalam variabel form
+        form.addEventListener("submit", function(event) { //Menambahkan event listener untuk event "submit" pada form, sehingga ketika form disubmit, fungsi yang diberikan akan dijalankan
+            event.preventDefault(); //Mencegah perilaku default dari form yang biasanya akan mengirim data ke server dan me-refresh halaman, sehingga kita dapat menangani data secara manual di sisi klien
+            const data = new FormData(form); //Membuat objek FormData yang mengambil data dari form, memungkinkan kita untuk mengakses nilai-nilai input yang telah diisi oleh pengguna
+            let output = "<h3>Data Warga Baru:</h3><table border='1' cellpadding='5'>"; //Membuat string output yang akan digunakan untuk menampilkan data warga baru dalam format HTML, dimulai dengan judul dan tag table dengan border dan padding
+            output += "<tr><th>Field</th><th>Isi</th></tr>"; //Menambahkan baris header pada tabel dengan dua kolom: "Field" untuk nama field dan "Isi" untuk nilai yang diinput
+            for (let [key, value] of data.entries()) { //Melakukan iterasi pada setiap pasangan key-value dalam objek FormData menggunakan for...of loop, di mana key adalah nama field dan value adalah nilai yang diinput oleh pengguna
+                output += `<tr><td>${key}</td><td>${value}</td></tr>`; //Menambahkan baris baru pada tabel untuk setiap pasangan key-value, dengan key ditampilkan di kolom "Field" dan value ditampilkan di kolom "Isi"
+            }
+            output += "</table>"; //Menutup tag table setelah semua data telah ditambahkan ke dalam output
+            document.getElementById("hasil").innerHTML = output; //Menampilkan output yang telah dibuat ke dalam div dengan id "hasil" dengan menggunakan innerHTML untuk mengisi konten HTML dari div tersebut dengan string output yang berisi tabel data warga baru
+        });
+    </script>
+
+    <footer>
+      <p>Belajar Dasar Pemrograman Web &#169; 2019, Dicoding Academy</p>
+    </footer>
+</body>
+</html>
