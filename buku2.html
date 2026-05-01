@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+</head>
+<body>
+    <h1>Bookshelf Apps</h1>
+
+    <h2>Masukkan Buku Baru</h2>
+
+    <form id="formBuku">
+        <div>
+        <label>Judul</label><br />
+        <input type="text" id="judul" required><br />
+        </div>
+
+        <div>
+        <label>Penulis</label><br />
+        <input type="text" id="penulis" required><br />
+        </div>
+
+        <div>
+        <label>Tahun</label><br />
+        <input type="date" id="tahun" required><br />
+        </div>
+
+        <div>
+        <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <h2>Belum selesai dibaca</h2>
+    <div id="belum"></div>
+
+    <script>
+       const form = document.getElementById("formBuku");
+    const rakBelum = document.getElementById("belum");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const judul = document.getElementById("judul").value;
+        const penulis = document.getElementById("penulis").value;
+        const tahun = document.getElementById("tahun").value;
+
+        const buku = document.createElement("div");
+        buku.classList.add("buku");
+
+        buku.innerHTML = `
+            <h4>${judul}</h4>
+            <p>Penulis: ${penulis}</p>
+            <p>Tahun: ${tahun}</p>
+        `;
+
+        rakBelum.appendChild(buku);
+
+        form.reset();
+    });
+    </script>
+
+</body>
+</html>

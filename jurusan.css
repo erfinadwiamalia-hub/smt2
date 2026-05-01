@@ -1,0 +1,45 @@
+ 
+        body {
+            font-family: 'Times New Roman';
+        }
+
+        legend, label {
+        font-family: "Times New Roman", serif;
+        font-size: 16px;
+        font-weight: bold;
+        }
+
+        header {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            width: 500px;
+            margin: auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            width: auto;
+            padding: 5px 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .btn-submit {
+            background-color: #fcfdfc;
+            color: white;
+            border: none;
+        }
+
+        

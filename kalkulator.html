@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kalkulator2.css">
+    <title>Kalkulator</title>
+</head>
+<body>
+    <header>
+        <h1>Bandung</h1>
+        <p>
+            Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.
+        </p>
+        <nav>
+            <ul>
+                <li><a href="bandung.html#sejarah">Sejarah</a></li>
+                <li><a href="bandung.html#geografis">Geografis</a></li>
+                <li><a href="bandung.html#wisata">Wisata</a></li>
+                <li><a href="form.html#perpindahan-warga">Perpindahan Warga</a></li>
+                <li><a href="kalkulator.html">Kalkulator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="kalkulator"> <!-- Container utama untuk kalkulator -->
+
+    <h2>Kalkulator</h2>
+    <div class="hasil" id="kalkulator"></div> <!-- Container untuk menampilkan hasil kalkulator -->
+
+    <hr>
+
+    <h3>Kalkulator Aritmatika</h3>
+
+    Angka pertama: <!-- Label untuk input angka pertama -->
+    <input type="number" id="angka1"><br><br> <!-- Input untuk angka pertama dengan id "angka1" -->
+
+    Angka kedua: <!-- Label untuk input angka kedua -->
+    <input type="number" id="angka2"><br><br> <!-- Input untuk angka kedua dengan id "angka2" -->
+
+    <button onclick="hitung()">Hitung</button> <!-- Tombol untuk memicu fungsi hitung saat diklik -->
+
+    <div class="hasil" id="output"></div> <!-- Container untuk menampilkan hasil perhitungan dengan id "output" -->
+
+</div>
+
+<script> 
+
+function hitung() { // Fungsi untuk melakukan perhitungan aritmatika
+
+    let angka1 = parseFloat(document.getElementById("angka1").value); // Mengambil nilai dari input angka pertama dan mengubahnya menjadi tipe data float
+    let angka2 = parseFloat(document.getElementById("angka2").value); 
+
+    if(isNaN(angka1) || isNaN(angka2)){ // Mengecek apakah salah satu input bukan angka (NaN)
+        document.getElementById("output").innerHTML =  // Menampilkan pesan error jika salah satu input bukan angka
+        "Masukkan kedua angka terlebih dahulu!";
+        return; // Menghentikan eksekusi fungsi jika input tidak valid
+    }
+
+    let tambah = angka1 + angka2; // Melakukan operasi penjumlahan
+    let kurang = angka1 - angka2; // Melakukan operasi pengurangan
+    let kali = angka1 * angka2; // Melakukan operasi perkalian
+
+    let bagi;  // Variabel untuk menyimpan hasil pembagian
+    if(angka2 === 0){ // Mengecek apakah angka kedua adalah nol untuk menghindari pembagian dengan nol
+        bagi = "Tidak bisa dibagi 0"; // Menampilkan pesan error jika pembagian dengan nol terjadi
+    } else { // Jika angka kedua tidak nol, lakukan pembagian
+        bagi = angka1 / angka2;
+    }
+
+    document.getElementById("output").innerHTML = // Menampilkan hasil perhitungan dalam format HTML dengan penjelasan untuk setiap operasi
+        "<b>Hasil Penjumlahan:</b> " + tambah + "<br>" + // Menampilkan hasil penjumlahan
+        "<b>Hasil Pengurangan:</b> " + kurang + "<br>" +
+        "<b>Hasil Perkalian:</b> " + kali + "<br>" +
+        "<b>Hasil Pembagian:</b> " + bagi;
+}
+</script>
+
+<footer>
+      <p>Belajar Dasar Pemrograman Web &#169; 2019, Dicoding Academy</p>
+    </footer>
+
+</body>
+</html>

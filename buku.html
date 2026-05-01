@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookshelf Apps</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 40px;
+        }
+
+        input {
+            display: block;
+            margin: 5px 0 10px;
+            padding: 5px;
+            width: 250px;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+
+        .buku {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-top: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bookshelf Apps</h1>
+
+<h2>Masukkan Buku Baru</h2>
+<form id="formBuku">
+    <label>Judul</label>
+    <input type="text" id="judul" required>
+
+    <label>Penulis</label>
+    <input type="text" id="penulis" required>
+
+    <label>Tahun</label>
+    <input type="date" id="tahun" required>
+
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Belum selesai dibaca</h2>
+<div id="belum"></div>
+
+<script>
+    const form = document.getElementById("formBuku");
+    const rakBelum = document.getElementById("belum");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // ambil input
+        const judul = document.getElementById("judul").value;
+        const penulis = document.getElementById("penulis").value;
+        const tahun = document.getElementById("tahun").value;
+
+        // buat elemen buku
+        const buku = document.createElement("div");
+        buku.classList.add("buku");
+
+        buku.innerHTML = `
+            <h3>${judul}</h3>
+            <p>Penulis: ${penulis}</p>
+            <p>Tahun: ${tahun}</p>
+        `;
+
+        // masukkan ke rak "belum selesai dibaca"
+        rakBelum.appendChild(buku);
+
+        // reset form
+        form.reset();
+    });
+</script>
+
+</body>
+</html>
