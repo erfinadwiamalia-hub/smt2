@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Dom</title>
+    <link rel="stylesheet" href="dom2.css">
+    <script src="dom2.js" defer></script>
+</head>
+<body>
+
+  <h1 id="judul">Selamat Datang</h1>
+  <p>Ini adalah halaman latihan DOM</p>
+  <button id="btnUbah">Ubah Tampilan</button>
+
+  <hr>
+
+  <h2>LaporSis</h2>
+
+  <form id="formLapor">
+    <input type="text" id="nama" placeholder="Masukkan nama"><br><br>
+
+    <select id="kategori">
+      <option value ="Kategori">Pilih kategori</option>
+      <option value="Kebersihan">Kebersihan</option>
+      <option value="Fasilitas">Fasilitas</option>
+      <option value="Kegiatan">Kegiatan</option>
+    </select><br><br>
+
+    <textarea id="pesan" placeholder="Tulis pesan"></textarea><br><br>
+
+    <button type="submit">Kirim</button>
+  </form>
+
+  <div class="box" id="hasil">
+    <h3>Hasil Laporan</h3>
+    <p id="outNama"></p>
+    <p id="outKategori"></p>
+    <p id="outPesan"></p>
+  </div>
+
+  
+</body>
+</html>

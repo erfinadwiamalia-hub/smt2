@@ -1,0 +1,71 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a2bed7;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    .container {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        width: 400px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    input, select, button {
+        padding: 10px;
+        margin: 5px;
+        width: 90%;
+    }
+
+    #listTugas { 
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    #listTugas p { 
+        background: #f9f9f9;
+        padding: 10px;
+        border-radius: 8px;
+        min-width: 120px;
+        max-width: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .penting-mendesak {
+        border-left: 6px solid rgb(5, 13, 95);
+    }
+
+    .penting {
+        border-left: 6px solid rgb(6, 73, 20);
+    }
+
+    .mendesak {
+        border-left: 6px solid rgb(118, 9, 9);
+    }
+
+    .selesai {
+        text-decoration: line-through;
+        color: rgb(15, 14, 14);
+    }
+
+    button {
+        cursor: pointer;
+        width: auto;
+        margin-left: 10px;
+    }

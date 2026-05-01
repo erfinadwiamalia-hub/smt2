@@ -1,0 +1,100 @@
+/* Pengaturan Dasar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.5s ease; /* Transisi halus saat warna bg berubah */
+}
+
+h1 {
+    color: #2c3e50;
+    transition: color 0.3s ease;
+}
+
+hr {
+    width: 100%;
+    max-width: 500px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Styling Form */
+#formLapor {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Agar padding tidak merusak lebar */
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+/* Styling Tombol */
+button {
+    cursor: pointer;
+    background-color: #f04daf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #7c0406;
+}
+
+#btnUbah {
+    width: auto;
+    margin-bottom: 10px;
+    background-color: #f04daf;
+}
+
+#btnUbah:hover {
+    background-color: #7c0406;
+}
+
+/* Styling Hasil Laporan */
+.box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-left: 5px solid ;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    display: none; /* Disembunyikan sampai form disubmit */
+}
+
+.box h3 {
+    margin-top: 0;
+    color: #063653;
+}
+
+.box p {
+    margin: 5px 0;
+    font-size: 14px;
+    word-wrap: break-word;
+}

@@ -1,0 +1,42 @@
+
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin: 40px;
+      transition: 0.3s;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    input, select, textarea {
+      padding: 8px;
+      width: 200px;
+    }
+
+    .box {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: none;
+    }
+
+    #hasil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  width: 250px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: left;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan DOM</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: aliceblue;
+        padding: 80px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    button {
+        padding: 10px 20px;
+        background-color: rgb(135, 182, 226);
+        color: white;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-bottom: auto;
+    }
+    form {
+        margin-top: 20px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+</style>
+
+<body>
+    <h1 id="judul">Halaman Home</h1>
+    <p id="paragraf">Selamat Datang</p>
+    <button id="btnUbah">Ubah Tampilan</button>
+
+    <form action="">
+        <fieldset>
+            <legend></legend>
+            <div>
+                <label for="nama">Masukkan Nama:</label>
+                <input type="text" id="nama" name="nama" required/>
+            </div>
+
+            <div>
+                <label for ="telepon">Masukkan Nomor Telepon:</label>
+                <input type="tel" id="telepon" name="telepon" inputmode="numeric" required/>
+            </div>
+
+            <div>
+                <label for ="image">Upload Gambar:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+
+            <p><button type="submit">Kirim</button></p>
+            <p><button type="reset">Reset</button></p>
+        </fieldset>
+    </form>
+
+    <div class="box" id="hasil">
+        <h3>Hasil Laporan</h3>
+        <p id="outNama"></p>
+    </div>
+
+
+    <script>
+    const btnUbah = document.getElementById("btnUbah");
+    const judul = document.getElementById("judul");
+    const paragraf = document.getElementById("paragraf");
+
+    const form = document.querySelector("form");
+    const inputNama = document.getElementById("nama");
+    const inputTelepon = document.getElementById("telepon");
+
+    const outNama = document.getElementById("outNama");
+
+    btnUbah.addEventListener("click", function() {
+        judul.textContent = "Halaman Admin";
+        paragraf.textContent = "Selamat Siang Admin";
+        judul.style.color = "blue";
+        paragraf.style.color = "blue";
+        btnUbah.style.backgroundColor = "blue";
+        document.body.style.backgroundColor = "yellow";
+    });
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // WAJIB biar ga reload
+
+        const nama = inputNama.value;
+        const telepon = inputTelepon.value;
+
+        outNama.textContent = "Nama: " + nama + " | No HP: " + telepon;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* MODE BAGUS */
+.body-bagus {
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+}
+
+.form-bagus {
+  background: white;
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hasil-bagus {
+  background: white;
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+input, select, textarea {
+  width: 90%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: gray;
+  color: white;
+  cursor: pointer;
+}

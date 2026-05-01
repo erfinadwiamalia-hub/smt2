@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dom3.css">
+</head>
+<body>
+
+    <h1 id="judul">Selamat Datang</h1>
+    <p id="paragraf">Ini adalah halaman latihan DOM</p>
+
+    <button id="btnUbah">Ubah Tampilan</button>
+
+    <hr>
+
+    <h2>LaporSis</h2>
+    <form id="formLapor">
+        <input type="text" id="nama" placeholder="Masukkan Nama"><br><br>
+
+        <select id="kategori">
+            <option value="Kegiatan">Kegiatan</option>
+            <option value="Fasilitas">Fasilitas</option>
+            <option value="Kedisiplinan">Kedisiplinan</option>
+        </select><br><br>
+
+        <textarea id="pesan" placeholder="Isi Pesan"></textarea><br><br>
+
+        <button type="submit">Kirim</button>
+    </form>
+
+    <div id="hasil" style="display:none;">
+        <h3>Hasil Laporan:</h3>
+        <p id="outNama"></p>
+        <p id="outKategori"></p>
+        <p id="outPesan"></p>
+    </div>
+
+    <script src="dom2.js"></script>
+</body>
+</html>
